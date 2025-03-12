@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Feature;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\PermissionsEnum;
@@ -66,6 +67,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
         ])->assignRole(RolesEnum::Admin);
+
+        Feature::factory(100)->create();
 
     }
 }
